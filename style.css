@@ -1,0 +1,24 @@
+table, th, td {
+    border: 1px solid grey;
+}
+table {
+    width: 500px;
+    text-align: center;
+}
+td{
+    border: 1px solid black;
+}
+#inscri{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+button{
+    background-color: brown;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+}
+p{
+    text-align: center;
+    font-family: sans-serif;
+}
