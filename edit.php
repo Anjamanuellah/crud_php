@@ -1,7 +1,7 @@
 <?php
     require_once("connexion.php");
     $id = $_GET["Getid"];
-    $query = "SELECT * FROM user WHERE id='".$id."'";
+    $query = "SELECT * FROM users WHERE id='".$id."'";
     $result = mysqli_query($connexion, $query);
 
     while($row=mysqli_fetch_assoc($result)) {
@@ -17,24 +17,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 
 </head>
 <body>
-    <div class="container ">
-        <form action="update.php?id=<?= $id ?>" method="POST">
+    <div class="container">
             <div>
-                <input type="text" name="nom" placeholder="Votre nom" value="<?= $nom?>">
+                <h2 class="text is-family-monospace">MODIFICATION</h2>
             </div>
-            <div>
-                <input type="text" name="prenom" placeholder="Votre prenom" value="<?=$prenom ?>">
+            <div class="info">
+                <form class="box" action="insert.php" method="post">
+                    <div class="field">
+                        <label class="label">Nom</label>
+                        <div class="control">
+                            <input class="input text is-uppercase" type="text" name="nom" value="<?= $nom?>">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Prenom(s)</label>
+                        <div class="control">
+                            <input class="input text is-capitalized" type="text" name="prenom" value="<?= $prenom?>">
+                        </div>      
+                    </div>
+                    <div class="btn">
+                        <button class="button is-link is-light" name="submit" >Submit</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <button name="update">Update</button>
-            </div>
-        </form>
-    </div>
+        </div>
 </body>
 </html>

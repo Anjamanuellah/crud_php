@@ -7,8 +7,9 @@ if(isset($_POST["update"]))
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
 
-    $query = "UPDATE user SET nom ='$nom', prenom ='$prenom' WHERE id='$id'";
+    $query = "UPDATE users SET nom ='$nom', prenom ='$prenom' WHERE id='$id'";
     $result =mysqli_query($connexion, $query);
+    
     if($result)
     {
         header("location:view.php");

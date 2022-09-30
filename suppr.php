@@ -3,7 +3,7 @@
     if(isset($_GET["del"]))
     {
         $id = $_GET["del"];
-        $query = "DELETE FROM user WHERE id = '$id'";
+        $query = "DELETE FROM users WHERE id = '$id'";
         $result = mysqli_query($connexion, $query);
         if($result)
         {

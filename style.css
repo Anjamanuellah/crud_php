@@ -1,24 +1,25 @@
-table, th, td {
-    border: 1px solid grey;
+
+h1, h2{
+    color:#3850B7 ;
+    text-align: center;
+    text-shadow: 0px 3px 4px #3850B7;
 }
-table {
+.container{
+    height: 900PX;
+}
+.box{
     width: 500px;
-    text-align: center;
+    height: 250px;
+    margin: auto;
 }
-td{
-    border: 1px solid black;
+.btn{
+    margin-left: 180px;
 }
-#inscri{
-    text-align: center;
-    padding: 20px 0px 20px 0px;
+
+.table{
+    width: 500px;
+    margin: auto;
 }
-button{
-    background-color: brown;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: none;
-}
-p{
-    text-align: center;
-    font-family: sans-serif;
+th{
+    color: #3850B7;
 }
